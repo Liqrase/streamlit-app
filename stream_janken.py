@@ -39,11 +39,11 @@ if st.button("じゃんけん！"):
     syouhai = janken(p_hand, cp_hand)
 
     if syouhai == 1:
-        st.write(f"## あなたの勝ち！{hantei(p_hand)}マス進む。")
+        st.write(f"#### あなたの勝ち！{hantei(p_hand)}マス進む。")
         st.session_state.p_walk += hantei(p_hand)
         st.session_state.count += 1
     elif syouhai == 2:
-        st.write(f"## CPUの勝ち！{hantei(cp_hand)}マス進む。")
+        st.write(f"#### CPUの勝ち！{hantei(cp_hand)}マス進む。")
         st.session_state.cp_walk += hantei(cp_hand)
         st.session_state.count += 1
     else:

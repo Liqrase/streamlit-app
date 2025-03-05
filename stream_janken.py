@@ -47,7 +47,7 @@ if st.button("じゃんけん！"):
         st.session_state.cp_walk += hantei(cp_hand)
         st.session_state.count += 1
     else:
-        st.write("あいこ。やり直し！")
+        st.write(f"#### あいこ。やり直し！")
     
     st.write(f"現在地：あなた {st.session_state.p_walk} マス、CPU {st.session_state.cp_walk} マス")
     st.write("続けて出したい手を選んでください")

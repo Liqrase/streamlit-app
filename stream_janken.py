@@ -68,3 +68,4 @@ elif st.session_state.cp_walk >= total_distance:
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0
     st.session_state.count = 1
+st.write("「じゃんけん」ボタンを押すと再戦できます。")

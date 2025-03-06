@@ -55,15 +55,15 @@ if st.button("じゃんけん！"):
 if st.session_state.p_walk >= total_distance:
     pl1, pl2 = st.columns(2)
     with pl1:
-        st.image("gazou/computer_man4_laugh.png", caption="喜ぶあなたM", use_column_width=True)
+        st.image("gazou/computer_man4_laugh.png", caption="喜ぶあなたM", use_container_width=True)
     with pl2:
-        st.image("gazou/computer_woman4_laugh.png", caption="喜ぶあなたW", use_column_width=True)
+        st.image("gazou/computer_woman4_laugh.png", caption="喜ぶあなたW", use_container_width=True)
     st.success("あなたの勝ち！")
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0
     st.session_state.count = 1
 elif st.session_state.cp_walk >= total_distance:
-    st.image("gazou/computer_note_good.png", caption="CPUの勝利", use_column_width=True)
+    st.image("gazou/computer_note_good.png", caption="CPUの勝利", use_container_width=True)
     st.error("CPUの勝ち！")
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0

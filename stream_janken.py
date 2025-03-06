@@ -18,7 +18,7 @@ def janken(p_hand, cp_hand):
     else:
         return 3
 
-st.title("じゃんけんグリコ")
+st.title("じゃんけんGlico")
 
 if "p_walk" not in st.session_state:
     st.session_state.p_walk = 0

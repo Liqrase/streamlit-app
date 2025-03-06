@@ -50,9 +50,8 @@ if st.button("じゃんけん！"):
         st.markdown(f"#### あいこ。やり直し！")
     
     st.write(f"現在地：あなた {st.session_state.p_walk} マス、CPU {st.session_state.cp_walk} マス")
-while st.session_state.p_walk < total_distance:
-    st.write("続けて出したい手を選んでください。")
-    break
+    # st.write("続けて出したい手を選んでください。")
+
 if st.session_state.p_walk >= total_distance:
     pl1, pl2 = st.columns(2)
     with pl1:

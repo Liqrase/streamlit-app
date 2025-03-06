@@ -53,6 +53,11 @@ if st.button("じゃんけん！"):
     st.write("続けて出したい手を選んでください")
 
 if st.session_state.p_walk >= total_distance:
+    pl1, pl2 = st.columns(2)
+    with pl1:
+        st.image("gazou/computer_man4_laugh.png", caption="喜ぶあなたM", use_column_width=True)
+    with pl2:
+        st.image("gazou/computer_woman4_laugh.png", caption="喜ぶあなたW", use_column_width=True)
     st.success("あなたの勝ち！")
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0

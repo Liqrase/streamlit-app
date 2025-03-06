@@ -58,6 +58,7 @@ if st.session_state.p_walk >= total_distance:
     st.session_state.cp_walk = 0
     st.session_state.count = 1
 elif st.session_state.cp_walk >= total_distance:
+    st.image("gazou/computer_note_good.png", caption="CPUの勝利", use_column_width=True)
     st.error("CPUの勝ち！")
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0

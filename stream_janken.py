@@ -50,10 +50,8 @@ if st.button("じゃんけん！"):
         st.markdown(f"#### あいこ。やり直し！")
     
     st.write(f"現在地：あなた {st.session_state.p_walk} マス、CPU {st.session_state.cp_walk} マス")
-if st.session_state.p_walk < total_distance:
-    st.write("続けて出したい手を選んでください。")
 
-elif st.session_state.p_walk >= total_distance:
+if st.session_state.p_walk >= total_distance:
     pl1, pl2 = st.columns(2)
     with pl1:
         st.image("gazou/computer_man4_laugh.png", caption="喜ぶあなたM", use_container_width=True)

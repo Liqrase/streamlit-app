@@ -50,9 +50,10 @@ if st.button("じゃんけん！"):
         st.markdown(f"#### あいこ。やり直し！")
     
     st.write(f"現在地：あなた {st.session_state.p_walk} マス、CPU {st.session_state.cp_walk} マス")
-    # st.write("続けて出したい手を選んでください。")
+if st.session_state.p_walk < total_distance:
+    st.write("続けて出したい手を選んでください。")
 
-if st.session_state.p_walk >= total_distance:
+elif st.session_state.p_walk >= total_distance:
     pl1, pl2 = st.columns(2)
     with pl1:
         st.image("gazou/computer_man4_laugh.png", caption="喜ぶあなたM", use_container_width=True)
@@ -62,10 +63,11 @@ if st.session_state.p_walk >= total_distance:
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0
     st.session_state.count = 1
+    st.write("「じゃんけん」ボタンを押すと再戦できます。")
 elif st.session_state.cp_walk >= total_distance:
     st.image("gazou/computer_note_good.png", caption="CPUの勝利", use_container_width=True)
     st.error("CPUの勝ち！")
     st.session_state.p_walk = 0
     st.session_state.cp_walk = 0
     st.session_state.count = 1
-st.write("「じゃんけん」ボタンを押すと再戦できます。")
+    st.write("「じゃんけん」ボタンを押すと再戦できます。")
